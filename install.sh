@@ -3,7 +3,7 @@
 # package type (subfolder in packager)
 
 # default version to install
-DEFAULT=5.6
+DEFAULT=7.2
 
 if [ -z $1 ]; then
 	TYPE=$DEFAULT
@@ -172,7 +172,7 @@ else
 fi
 
 echo "Start packager (may take some time) using $PYTHONPATH";
-
+echo "sudo $PYTHONPATH /usr/local/packager/packager.py install $TYPE-frontenddev";
 sudo $PYTHONPATH /usr/local/packager/packager.py install $TYPE-frontenddev
 cd $ORIPWD
 echo "Finished."
